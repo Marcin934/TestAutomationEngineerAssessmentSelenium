@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = "Automationpractice UI testing">
+    <parameter name="landingPage" value="http://automationpractice.com/" />
+    <parameter name="email" value="6p7YwWqpmh@mailinator.com" />
+    <parameter name="passw" value="iYcvqR37ny" />
+    <parameter name="myAccount" value="Test Testowy" />
+    <listeners>
+        <listener class-name="reporting.GenerateReport"></listener>
+    </listeners>
+    <test name = "Check Customer Login with valid Data">
+        <classes>
+            <class name = "automationpracticeTest.TC01_Check_Customer_Login_with_valid_Data" />
+        </classes>
+    </test>
+    <test name = "Check Customer Login with invalid Data">
+        <parameter name="invalidEmail" value="6p7YwWqpmh.mailinator.com" />
+        <parameter name="invalidPassw" value="IYcvqR37ny" />
+        <parameter name="emailRequiredErrorMessage" value="An email address required." />
+        <parameter name="emailInvalidErrorMessage" value="Invalid email address." />
+        <parameter name="passwordRequiredErrorMessage" value="Password is required." />
+        <parameter name="authenticationFailedErrorMessage" value="Authentication failed." />
+        <classes>
+            <class name = "automationpracticeTest.TC02_Check_Customer_Login_with_invalid_Data" />
+        </classes>
+    </test>
+
+
+
+</suite>
