@@ -9,11 +9,11 @@
     <listeners>
         <listener class-name="reporting.GenerateReport"></listener>
     </listeners>
-    <test name = "Check Customer Login with valid Data">
-        <classes>
-            <class name = "automationpracticeTest.TC01_Check_Customer_Login_with_valid_Data" />
-        </classes>
-    </test>
+<!--    <test name = "Check Customer Login with valid Data">-->
+<!--        <classes>-->
+<!--            <class name = "automationpracticeTest.TC01_Check_Customer_Login_with_valid_Data" />-->
+<!--        </classes>-->
+<!--    </test>-->
     <test name = "Check Customer Login with invalid Data">
         <parameter name="invalidEmail" value="6p7YwWqpmh.mailinator.com" />
         <parameter name="invalidPassw" value="IYcvqR37ny" />

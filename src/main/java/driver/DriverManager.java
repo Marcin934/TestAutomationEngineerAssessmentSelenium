@@ -18,9 +18,7 @@ public class DriverManager {
         if(driver==null){
             chromedriverFile="chromedriver87_0_4280_20.exe";
             System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/"+chromedriverFile);
-            ChromeOptions options = new ChromeOptions();
-            options.setCapability("marionette", false);
-            driver= new ChromeDriver(options);
+            driver= new ChromeDriver();
             return driver;
         }
         return driver;
