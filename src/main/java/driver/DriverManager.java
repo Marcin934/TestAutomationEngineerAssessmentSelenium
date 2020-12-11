@@ -26,6 +26,7 @@ public class DriverManager {
 
     public static void disposeDriver(){
         driver.close();
+        driver.quit();
         driver=null;
     }
 }

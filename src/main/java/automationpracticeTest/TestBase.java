@@ -2,15 +2,12 @@ package automationpracticeTest;
 
 import driver.DriverManager;
 import driver.DriverUtils;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import reporting.GenerateReport;
 
 public class TestBase {
 
-    @BeforeMethod
+    @BeforeTest
     @Parameters({"landingPage"})
     public void prepare(String landingPage){
         DriverManager.getWebDriver();
@@ -18,7 +15,7 @@ public class TestBase {
         DriverUtils.navigateToPage(landingPage);
     }
 
-    @AfterMethod
+    @AfterTest
     public void closeMethod(){
         DriverManager.disposeDriver();
     }
